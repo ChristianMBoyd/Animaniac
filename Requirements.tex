@@ -1,0 +1,48 @@
+\documentclass{article}
+
+\begin{document}
+
+\title{Animusic Pipe Dream Engineering Project}
+\author{Christian Boyd}
+\maketitle
+
+\begin{abstract}
+    This document is (currently) a high-level outline of the requirements needed to 
+    produce a physical re-creation of the Animusic Pipe Dream animation.
+\end{abstract}
+
+\section{Projectile automation and control}
+At a very basic level, re-creating the Animusic Pipe Dream animation requires the ability
+to shoot spherical projectiles toward a variety of targets.  To this end, the initial
+robotics effort will be toward implementing a satisfactory projectile system.
+
+\subsection{Current requirements}
+
+At a basic level, control over projectile motion requires control over the magnitude and
+direction of the projectile force.  I've currently split this into the impulse and
+orientation of our projectile system.  Of course, we need to propel {\it something}, and
+so an additional requirement is to identify the actual projectiles.
+
+\subsubsection{Propulsion impulse control}
+A first-pass at a reasonable impulse requirement is the ability to launch the chosen
+projectile 2 feet at an orientation of 80 degrees relative to the ground.
+
+The desired system should demonstrate this capability at least 99\% of the time.
+
+\subsubsection{Propulsion orientation control}
+A first-pass at a reasonable orientation requirement is the ability to orient the initial
+projectile direction.
+
+This is a requirement to orient the initial projectile within 1 degree, separately in the
+azimuthal and polar angles, of a prescribed spherical orientation.
+
+\subsubsection{Procure suitable, spherical projectiles}
+{\it Finish}...
+
+\subsection{Nice-to-haves or future considerations}
+
+\subsubsection{Rapid loading}
+
+\subsubsection{Short firing cycle}
+
+\end{document}
