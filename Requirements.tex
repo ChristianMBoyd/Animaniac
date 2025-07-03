@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage{url}
+
+\begin{document}
+
+\title{Animusic Pipe Dream Engineering Project}
+
+\author{Christian Boyd}
+
+\maketitle
+
+\tableofcontents
+
+\begin{abstract}
+    This document is (currently) a high-level outline of the requirements needed to 
+    produce a physical re-creation of the Animusic Pipe Dream animation \cite{AnimusicPipeDream}.
+\end{abstract}
+
+\section{Projectile automation and control}
+At a very basic level, re-creating the Animusic Pipe Dream animation requires the ability
+to shoot spherical projectiles toward a variety of targets.  To this end, the initial
+robotics effort will be toward implementing a satisfactory projectile system.
+
+\subsection{Requirements}
+
+At a basic level, control over projectile motion requires control over the magnitude and
+direction of the projectile force.  I've currently split this into the impulse and
+orientation of our projectile system.  Of course, we need to propel {\it something}, and
+so an additional requirement is to identify the actual projectiles.
+
+\subsubsection{Propulsion impulse control}
+A first-pass at a reasonable impulse requirement is the ability to launch the chosen
+projectile 2 feet at an orientation of 80 degrees relative to the ground.
+
+A satisfactory projectile system will exceed this performance threshold on at least 99\% of attempts.
+
+\subsubsection{Propulsion orientation control}
+A first-pass at a reasonable orientation requirement is the ability to orient the initial
+projectile direction.
+
+A satisfactory projectile system will re-orient itself to within 1 degree of the specified azimuthal and polar angles, independently.\footnote{I.e., the measured azimuthal angle will be within 1 degree of the input and, separately, the measured polar angle will be within 1 degree of the input.}  There is currently no cross-term consideration on their uncertainty.
+
+\subsubsection{Procure suitable, spherical projectiles}
+The desired projectiles are
+\begin{itemize}
+    \item spherical,
+    \item sufficiently light to be complementary to the projectile impulse requirements,
+    \item and sufficiently heavy to cause a percussive impact when striking an instrument.
+\end{itemize}
+
+This requirement can be considered met insofar as the projectile chosen is spherical and facilitates the other requirements.  Some evidence, however, should be provided for why the weight is satisfactory toward long-term percussive goals.
+
+\subsection{Nice-to-haves and/or future considerations}
+Currently, these requirements are not within scope.  Nevertheless, they will eventually need to be addressed.  If the primary requirements are not hindered by their consideration, then it would be preferable to incorporate these features sooner than later.
+
+\subsubsection{Rapid loading}
+\label{subsubsection:rapid-loading}
+
+The projectile system will eventually need to fire projectiles at the rate shown in the Animusic Pipe Dream video \cite{AnimusicPipeDream}.  An ideal loading system would be extensible to firing many projectiles in succession.
+
+\subsubsection{Short firing cycle}
+For the same reasons as discussed in \ref{subsubsection:rapid-loading}, the ideal mechanism of impulse would naturally extend itself to be reset and re-fired in rapid succession.  
+
+\bibliographystyle{unsrt}
+
+\bibliography{mybib}
+
+\end{document}
